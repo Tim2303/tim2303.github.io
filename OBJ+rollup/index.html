@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CGSG forever!</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Some text -->
+        <h1 class="header">OBJ render sample</h1>
+
+        <!-- Figures part -->
+        <canvas class="object" id="obj" width="1920" height="900"></canvas>
+
+        <!-- InitGL main part -->
+    <script type="module">
+	    import * as render from './main.js';
+
+	    window.addEventListener("load", () => {
+	        render.initGL("obj");
+	    });
+    </script>
+
+        <!-- End -->
+        <h2 class="header">END</h2>
+    </body>
+</html>

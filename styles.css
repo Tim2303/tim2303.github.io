@@ -1,0 +1,31 @@
+/* Main site */
+html {
+    background: url(./main.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Head text */
+.header {
+    text-align: center;
+    border: 3px dashed rgb(124, 0, 169);
+    box-shadow: 0 0 7px 3px rgb(102, 66, 115);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    width: 900px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+}
+
+.box {
+    display: flex;
+    width: auto;
+    grid-template-columns: 50% 50%;
+    align-items: start;
+    justify-content: space-between;
+    align-content: center;
+}

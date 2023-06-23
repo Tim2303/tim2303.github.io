@@ -1,0 +1,150 @@
+/* Main html part - background*/
+html {
+    background-color: rgb(71, 25, 97);
+}
+
+.angle {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 30%;
+    font-size: 20px;
+    color: rgb(0, 192, 99);
+}
+
+.game-res {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 20%;
+    font-size: 30px;
+    color: rgb(185, 179, 22);
+    margin-left: 40px;
+}
+
+.game-name {
+    margin: 10px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 25%;
+}
+
+.room-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 30%;
+    font-size: 20px;
+}
+
+.turn-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 30%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(185, 133, 0);
+    font-size: 20px;
+}
+
+.shoot-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 30%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(58, 161, 92);
+    font-size: 20px;
+}
+
+.join {
+    background-color: orange;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+}
+
+.small-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 15%;
+    font-size: 14px;
+    color: red;
+}
+
+.header{
+    background-color: #181c2b;
+    color: aliceblue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.object {
+    width: 100%;
+    height: 900;
+    border: 3px dotted rgb(124, 0, 169);
+    box-shadow: 0 0 7px 3px rgb(102, 66, 115);
+    border-radius: 10px;
+}
+
+/* From MZ2 ///////////////////////////////*/
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-block{
+    height: 700px;
+    display: flex;
+}
+
+.settings {
+    background-color: rgb(62, 62, 62);
+    width: 300px;
+    height: 680px;
+    border: 3px solid #181c2b;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.game{
+    background-color: rgb(76, 76, 102);
+    width: 1500px;
+    height: 680px;
+    margin: start;
+    border: 3px solid #181c2b;
+    border-radius: 10px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#nick{
+    border: none;
+    height: 30px;
+    background-color: darkslategray;
+    color: aliceblue;
+    font-size: 15px;    
+}
+
+.bottom-zone{
+    background-color: #181c2b;
+    min-height: 10vh;
+    max-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-size: 50px;
+}

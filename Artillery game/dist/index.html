@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artillery game</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Upper zone -->
+        <h1 class="header" id="info">
+          <div class="game-name">Artillery game</div>
+          <div class="room-info" id="room-info">You are in lobby</div>
+          <div class="small-info" id="small-info"></div>
+          <input type="button" class="join" id="join" value="Join"></input>
+          <div class="game-res" id="game-res"></div>
+        </h1>
+        <script src="./bundle.js" type="module"></script>
+
+        <!-- Main zone -->
+        <div class="main-block">
+          <canvas class="game" id="game" width="1500px" height="680px"></canvas>
+          <div class="settings">
+            <p>Speed</p>
+            <input id="speed" type="range" min="0" max="20" step="1" value="10" list="rangeList1"
+                onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+            <datalist id="rangeList1">
+              <option value="0" label="0">
+              <option value="5" label="5">
+              <option value="10" label="10">
+              <option value="15" label="15">
+              <option value="20" label="20">
+            </datalist>
+            <span id="rangeValue">10</span> 
+          </div>
+        </div>
+
+        <!-- Down zone -->
+        <div class="bottom-zone">
+          <div class="shoot-info" id="shoot-info"></div>
+          <div class="turn-info" id="turn-info"></div>
+          <div class="angle" id="angle"></div>
+        </div>
+    </body>
+</html>

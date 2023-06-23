@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CGSG forever!</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Some text -->
+        <h1 class="header">Input sample</h1>
+        <div class="text">
+            <p>Info</p>
+            <p>Some text for test output</p>
+        </div>
+
+        <!-- User clicks -->
+        <form action="index.html" method="get">
+            <div class="filler">
+                <br /><input type="text" name="a" value="abc" />
+                <br /><input type="time" name="b" value="11:30" />
+                <br /><input type="date" name="c" value="2023-05-06" />
+            </div>
+            <div class="text">
+                <br /><input type="radio" name="e" value="yes" /> Want
+                <input type="radio" name="f" value="no" /> Don't want
+            </div>
+        </form>
+
+        <!-- Error canvas -->
+        <canvas class="error"></canvas>
+
+        <!-- Settings part -->
+        <h1 class="header">Render settings</h1>
+        <div class="settings">
+            <input type="checkbox" name="d" checked> Is Pause
+            <p>Info</p>
+        </div>
+
+        <!-- Figures part -->
+        <h1 class="header">WGL sample - 5 Platon's figures (temporary without dodecahedron)</h1>
+        <div class="box">
+            <div>
+                <canvas class="figure" id="0 - Tetr" width="512" height="512"></canvas>
+                <canvas class="figure" id="1 - Octa" width="512" height="512"></canvas>
+                <canvas class="figure" id="2 - Cube" width="512" height="512"></canvas>
+            </div>
+            <div><canvas class="figure" id="3 - Dode" width="512" height="512"></canvas>
+            <canvas class="figure" id="4 - Ikos" width="512" height="512"></canvas>
+            <canvas class="figure" width="512" height="512"></canvas></div>
+        </div>
+
+        <!-- InitGL main part -->
+        <script type="module">
+            import * as render from './main.js';
+            import * as coords from './res/Utils/coords.js';
+
+            let resFig = coords.createFigures();
+            window.addEventListener("load", () => {
+                render.initGL("0 - Tetr", resFig);
+                render.initGL("1 - Octa", resFig);
+                render.initGL("2 - Cube", resFig);
+                render.initGL("3 - Dode", resFig);
+                render.initGL("4 - Ikos", resFig);
+            });
+        </script>
+
+        <!-- End -->
+        <h1 class="header">END</h1>
+    </body>
+</html>
