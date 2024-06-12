@@ -17,28 +17,33 @@ const GithubRepoSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [repos, setRepos] = useState([]);
 
-  const searchRepos = async () => {
-    const response = await fetch(
-      `https://api.github.com/search/repositories?q=${searchTerm}&sort=stars&order=desc`
-    );
-    const data = await response.json();
-    setRepos(data.items);
+  /* Input listener */
+  const inputField = document.getElementById('input') as HTMLInputElement;
+  if (inputField === null) return;
+
+  inputField.oninput = () => {
+    setSearchTerm(inputField.value);
+  };
+  inputField.onkeyup = async (e: any) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      const response = await fetch(
+        `https://api.github.com/search/repositories?q=${searchTerm}&sort=stars&order=desc`
+      );
+      const data = await response.json();
+      setRepos(data.items);
+    }
   };
 
   return (
     <div>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Enter a keyword"
-      />
-      <button onClick={searchRepos}>Search</button>
       <ul>
         {repos.map((repo: any) => (
-          <li>
-            Score:{repo.stargazers_count}::::{repo.name}":"
-            <a href={repo.html_url}>{repo.html_url}</a>
+          <li id="listEl">
+            <strong>Score: {repo.stargazers_count}</strong>
+            <p>
+              {repo.name} : <a href={repo.html_url}>{repo.html_url}</a>
+            </p>
+            <p>Description : {repo.description}</p>
           </li>
         ))}
       </ul>
