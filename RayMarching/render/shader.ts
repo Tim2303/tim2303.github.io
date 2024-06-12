@@ -18,12 +18,7 @@ export class _shaderManager {
     let shdsID: WebGLShader[] = [];
 
     for (let i = 0; i < shdsName.length; i++) {
-      const buf =
-        "../binary/shaders/" +
-        fileName +
-        "/" +
-        shdsName[i] +
-        ".glsl";
+      const buf = "./binary/shaders/" + fileName + "/" + shdsName[i] + ".glsl";
 
       const data = await (await fetch(buf)).text();
       let res = gl.createShader(shdsType[i]);
