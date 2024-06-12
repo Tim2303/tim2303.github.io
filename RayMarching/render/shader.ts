@@ -23,9 +23,7 @@ export class _shaderManager {
         fileName +
         "/" +
         shdsName[i] +
-        ".glsl" +
-        "?nocache" +
-        new Date().getTime();
+        ".glsl";
 
       const data = await (await fetch(buf)).text();
       let res = gl.createShader(shdsType[i]);
