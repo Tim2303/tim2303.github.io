@@ -10,7 +10,7 @@ const WeatherApp = () => {
     const latit = e.lngLat.lat;
     const longt = e.lngLat.lng;
     console.log(e.lngLat);
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latit}&lon=${longt}&units=metric&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latit}&lon=${longt}&units=metric&appid=${apiKey}`;
 
     fetch(url).then((data) => {
       data.text().then((txt) => {
