@@ -35,3 +35,6 @@ npm install @rollup/plugin-commonjs
 npm install @rollup/plugin-node-resolve
 npm install @rollup/plugin-replace
 npm install astroturf
+
+// ES build
+npm install --save-exact --save-dev esbuild
