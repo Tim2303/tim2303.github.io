@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My page</title>
+        <title>Fractal</title>
         <meta charset="UTF_8">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <canvas
-          id="MyCan"  
-          width="1000px"
-          height="1000px"
-          style="border: 3px solid rgb(215, 16, 16)"     
-        ></canvas>
-        <div>
-            <p class="Average text">Timmimin</p>
-            <p id="1">Something...</p>
+        <div class="menu">
+            <h2>Fractals</h2>
+            <button id="mandelbrotBtn">Mandelbrot</button>
+            <button id="juliaBtn">Julia</button>
         </div>
+        <canvas
+          id="MyCan"
+          width="900"
+          height="900"
+          style="border: 3px solid rgb(215, 16, 16)"
+        ></canvas>
         <script type="module">
-            import * as lib from './main.js';   
-
-            window.addEventListener("load", () => {
-                lib.initGL();
-            });
+            import * as lib from './main.js';
+            window.addEventListener("load", lib.initGL);
         </script>
     </body>
 </html>

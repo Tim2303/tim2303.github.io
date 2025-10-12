@@ -1,3 +1,49 @@
-body { 
-    background-color:rgb(104, 104, 104);
+html, body {
+    margin: 0;
+    height: 100%;
+    background: radial-gradient(circle at center, #0d0d15, #020208);
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    overflow: hidden;
+}
+
+#MyCan {
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 160px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.menu h2 {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu button {
+    width: 100%;
+    background: linear-gradient(90deg, #003366, #0099cc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu button:hover {
+    background: linear-gradient(90deg, #0077aa, #00ccff);
 }
