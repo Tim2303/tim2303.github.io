@@ -166,21 +166,43 @@ body {
     background: var(--background);
 }
 
-.about-content {
-    max-width: 800px;
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.about-card {
+    background: var(--surface);
+    border-radius: var(--card-radius);
+    padding: 30px;
     text-align: center;
+    border: 1px solid var(--border);
+    transition: var(--transition);
 }
 
-.about-text {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: var(--text-secondary);
+.about-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
 }
 
-.highlight {
+.about-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.about-card h3 {
     color: var(--primary);
-    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.about-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 /* Tech Stack */
@@ -240,7 +262,8 @@ body {
         font-size: 1.2rem;
     }
 
-    .projects-grid {
+    .projects-grid,
+    .about-grid {
         grid-template-columns: 1fr;
     }
 
