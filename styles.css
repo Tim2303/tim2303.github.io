@@ -84,6 +84,7 @@ body {
 .contact-btn {
     display: inline-flex;
     align-items: center;
+    margin: 1rem;
     gap: 10px;
     background: var(--primary);
     color: white;
@@ -270,4 +271,58 @@ body {
     .section-title {
         font-size: 2rem;
     }
+}
+
+/* Steam link */
+.steam-profile {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.steam-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background: var(--background);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.steam-link:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.steam-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0.8);
+    transition: var(--transition);
+}
+
+.steam-link:hover .steam-icon {
+    filter: brightness(1);
+}
+
+.steam-name {
+    font-weight: 600;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.steam-link:hover .steam-name {
+    color: var(--secondary);
+}
+
+.cgsg-icon {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    border-radius: 7px;
 }
