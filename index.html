@@ -1,19 +1,132 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim2303 - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a href="./GitSearch/"
-    ><img src="!Logos/Git.png" width="200" height="200"
-  /></a>
-  <a href="./MapNavigator/"
-    ><img src="!Logos/Map.png" width="200" height="200"
-  /></a>
-  <a href="./RayMarching/"
-    ><img src="!Logos/Rnd.png" width="200" height="200"
-  /></a>
-  <a href="./Matrix/"
-    ><img src="!Logos/Matr.png" width="100" height="100"
-  /></a>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Тимур Минажетдинов</h1>
+            <div class="hero-subtitle">C++ Developer & Graphics Programmer</div>
+            <p class="hero-description">
+                I'm working on my fast math library in C++. Currently learning Python.
+                Fun fact: I graduated from music school with honors.
+            </p>
+            <a href="mailto:tireminazhetdinov@edu.hse.ru" class="contact-btn">
+                Get In Touch
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects">
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <a href="./GitSearch/" class="project-card fade-in">
+                <img src="!Logos/Git.png" alt="GitSearch">
+                <h3>GitSearch</h3>
+                <p>Git repository and people search</p>
+            </a>
+            <a href="./MapNavigator/" class="project-card fade-in">
+                <img src="!Logos/Map.png" alt="MapNavigator">
+                <h3>MapNavigator</h3>
+                <p>Interactive mapping and weather system</p>
+            </a>
+            <a href="./RayMarching/" class="project-card fade-in">
+                <img src="!Logos/Rnd.png" alt="RayMarching">
+                <h3>RayMarching</h3>
+                <p>Real-time ray marching graphics engine</p>
+            </a>
+            <a href="./Matrix/" class="project-card fade-in">
+                <img src="!Logos/Matr.png" alt="Matrix">
+                <h3>Matrix</h3>
+                <p>Matrix universe camera</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                I love programming and have extensive experience in writing graphics engines
+                in <span class="highlight">C++</span> using <span class="highlight">OpenGL</span>,
+                <span class="highlight">WebGL</span>, and <span class="highlight">Vulkan</span>.
+                Passionate about real-time rendering, high-performance computing, and creating
+                efficient mathematical libraries.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack -->
+<section class="tech-stack">
+    <div class="container">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="tech-grid">
+            <span class="tech-item">C++</span>
+            <span class="tech-item">OpenGL</span>
+            <span class="tech-item">Vulkan</span>
+            <span class="tech-item">WebGL</span>
+            <span class="tech-item">Python</span>
+            <span class="tech-item">JavaScript</span>
+            <span class="tech-item">HTML5</span>
+            <span class="tech-item">CSS3</span>
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">Git</span>
+            <span class="tech-item">Docker</span>
+            <span class="tech-item">Unity</span>
+            <span class="tech-item">Unreal Engine</span>
+            <span class="tech-item">Blender</span>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Simple intersection observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationDelay = '0s';
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.style.animationDelay = '0s';
+        observer.observe(card);
+    });
+
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
 </body>
+</html>
