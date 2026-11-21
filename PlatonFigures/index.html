@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>CGSG forever!</title>
         <meta charset="utf-8">
@@ -16,13 +16,20 @@
         <!-- User clicks -->
         <form action="index.html" method="get">
             <div class="filler">
-                <br /><input type="text" name="a" value="abc" />
-                <br /><input type="time" name="b" value="11:30" />
-                <br /><input type="date" name="c" value="2023-05-06" />
+                <br /><label>
+                <input type="text" name="a" value="abc" />
+                </label>
+                <br /><label>
+                <input type="time" name="b" value="11:30" />
+                </label>
+                <br /><label>
+                <input type="date" name="c" value="2023-05-06" />
+                </label>
             </div>
             <div class="text">
-                <br /><input type="radio" name="e" value="yes" /> Want
-                <input type="radio" name="f" value="no" /> Don't want
+                <br />
+                <label><input type="radio" name="choice" value="yes" /> Want</label>
+                <label><input type="radio" name="choice" value="no" /> Don't want</label>
             </div>
         </form>
 
@@ -32,12 +39,14 @@
         <!-- Settings part -->
         <h1 class="header">Render settings</h1>
         <div class="settings">
-            <input type="checkbox" name="d" checked> Is Pause
+            <label>
+                <input type="checkbox" name="d" checked>
+            </label> Is Pause
             <p>Info</p>
         </div>
 
         <!-- Figures part -->
-        <h1 class="header">WGL sample - 5 Platon's figures (temporary without dodecahedron)</h1>
+        <h1 class="header">WGL sample - 5 Platon's figures (now with dodecahedron!)</h1>
         <div class="box">
             <div>
                 <canvas class="figure" id="0 - Tetr" width="512" height="512"></canvas>
