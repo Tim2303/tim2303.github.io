@@ -68,7 +68,7 @@ vec3 Shade(vec3 P, vec3 N) {
     vec3 L = normalize(vec3(1, 2, 3));
     vec3 LC = vec3(1);
     vec3 color = vec3(0.0f, 0.25f, 0.37f);
-    vec3 V = normalize(P - vec3(1000));
+    vec3 V = normalize(P - CamLoc);
 
   // Ambient
     color = vec3(0.1f); // Ka.xyz

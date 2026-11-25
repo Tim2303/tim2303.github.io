@@ -1,28 +1,41 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Ray Marching</title>
   <link rel="stylesheet" href="styles.css" />
-
-  <button class="glow-on-hover" type="button">HOVER ME, THEN CLICK ME!</button>
-  <button class="glow-on-hover" type="button">ANOTHER BUTTON!</button>
-  <button class="glow-on-hover" type="button">I LOVE BUTTONS!</button>
-  <button class="glow-on-hover" type="button">MORE!</button>
-  <button class="glow-on-hover" type="button">MOOORE!</button>
-  <button class="glow-on-hover" type="button">MOOOOOOOOORE!</button>
+  <script defer src="./output/main.js"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="buttons">
+    <button class="glow-on-hover" type="button">HOVER ME, THEN CLICK ME!</button>
+    <button class="glow-on-hover" type="button">ANOTHER BUTTON!</button>
+    <button class="glow-on-hover" type="button">I LOVE BUTTONS!</button>
+    <button class="glow-on-hover" type="button">MORE!</button>
+    <button class="glow-on-hover" type="button">MOOORE!</button>
+    <button class="glow-on-hover" type="button">MOOOOOOOOORE!</button>
+  </div>
 
   <div class="range">
     <div>Blur level</div>
     <input type="range" min="0" max="9" value="0" id="range" />
     <div class="value">0</div>
   </div>
+</aside>
 
-  <script src="./output/main.js"></script>
-</head>
-<body>
-  <canvas
-    id="glcanvas"
-    width="1600px"
-    height="900px"
-    class="render-stretched"
-  ></canvas>
+<main class="stage">
+  <canvas id="glcanvas" width="1600" height="900"></canvas>
+</main>
+
+<div class="hint">
+      <span class="hint-idle">
+        <b>Click</b> the render to control the camera
+      </span>
+  <span class="hint-active">
+        <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move ·
+        <kbd>Esc</kbd> release the mouse
+      </span>
+</div>
 </body>
+</html>

@@ -53,6 +53,17 @@ export class _input {
           false;
   }
 
+  reset() {
+    for (let i = 0; i < 256; i++) {
+      this.keysEvent[i] = false;
+      this.keys[i] = false;
+      this.keysOld[i] = false;
+      this.keysClick[i] = false;
+    }
+    this.mdXEvent = this.mdYEvent = this.mdZEvent = 0;
+    this.mdX = this.mdY = this.mdZ = 0;
+  }
+
   response() {
     this.mX = this.mXEvent;
     this.mY = this.mYEvent;
