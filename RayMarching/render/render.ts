@@ -59,6 +59,9 @@ export class _render {
   }
 
   frameStart() {
+    let prg = this.shdManager.get(this.mainShd);
+    gl.useProgram(prg.progID);
+
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clearDepth(1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
@@ -71,7 +74,6 @@ export class _render {
     let prg = this.shdManager.get(this.mainShd);
     this.setPositionAttribute(prg, this.vertexBuffer);
 
-    gl.useProgram(prg.progID);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
   }
 
